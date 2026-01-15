@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 
@@ -10,6 +11,12 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_length=20,
         blank=True,
         null=True
+    )
+
+    birthdate = models.DateField(
+        blank=True,
+        null=True,
+        verbose_name="Дата рождения"
     )
 
     is_active = models.BooleanField(default=True)
