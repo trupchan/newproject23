@@ -98,8 +98,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+AUTH_USER_MODEL = "users.CustomUser"
 
-AUTH_USER_MODEL = 'users.User'
+
+GOOGLE_CLIENT_ID = "your_client_id"
+GOOGLE_CLIENT_SECRET = "your_client_secret"
+GOOGLE_REDIRECT_URI = "http://127.0.0.1:8000/api/auth/google/callback/"
+
 
 
 REST_FRAMEWORK = {

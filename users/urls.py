@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import CustomTokenObtainPairView
+from .views import google_login, google_callback
 
 urlpatterns = [
-    path("token/", CustomTokenObtainPairView.as_view()),
+    path('google/login/', google_login),
+    path('google/callback/', google_callback),
 ]
